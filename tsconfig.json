@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "es2015",
+    "lib": ["es6", "DOM"],
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types", "./typings"],
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "baseUrl": ".",
+    "plugins": [{ "transform": "ts-transform-paths" }],
+    "paths": {
+      "@/*": ["src/*"],
+      "*": ["typings/*", "*"]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["./node_modules", "./build"],
+  "include": ["./src"]
+}
